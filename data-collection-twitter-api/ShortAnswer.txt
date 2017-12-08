@@ -1,0 +1,90 @@
+Enter your responses inline below and push this file to your private GitHub
+repository.
+
+
+1. Assume I plan to use the friend_overlap function above to quantify the
+similarity of two users. E.g., because 344 is larger than 1, I conclude that
+Jill Stein and Gary Johnson are more similar than Hillary Clinton and Donald
+Trump.
+
+How is this approach misleading? How might you fix it?
+
+	If we compare the number of common users each pair follows then, Jill Stein and Gary Johnson have 238 users common as compare to pair of Hillary Clinton and Donald Trump which has just 1 user in common. However from these values we can not say that Jill Stein and Gary Johnson are more similar than Hillary Clinton and Donald Trump as these values gives us no information on the account types they are following. It can be possible that the pair of Jill Stein and Gary Johnson have 238 	users in common but all belong to a specific class such as politics then they share interest only in one category which is similar to Hillary Clinton and Donald Trump.
+	The above example proves that the approach to use friend overlap function to analyze the similarity is misleading.
+	The approach can be improved if unique interests are evaluated between two users by analyzing their common friends and their domain.
+	If we consider the percentage of the common friends between users rather than just the number that would be more appropriate to use as a metric for measuring similarity between users such as Jaccard Similarity and Cosine Similarity.
+
+
+
+
+
+
+
+
+
+
+2. Looking at the output of your followed_by_hillary_and_donald function, why
+do you think this user is followed by both Hilary Clinton and Donald Trump,
+who are rivals? Do some web searches to see if you can find out more
+information.
+
+
+	1. The only user followed by Hillary and Donald is WhiteHouse. White House is the official residence and workplace of the President of the United States.
+	2. As Donald Trump is a current president of the United States that why he is following White House.
+	3. Hillary Clinton is wife of Bill Clinton who served as the 42nd President of the United States from 1993 to 2001 so she was a first lady and stayed at White House thats why she is following White House.
+
+
+
+
+
+
+
+
+
+
+
+3. There is a big difference in how many accounts each candidate follows (Gary
+Johnson follows over 3K accounts, while Donald Trump follows less than
+50). Why do you think this is? How might that affect our analysis?
+
+	Gary Johnson follows over 3K accounts, while Donald Trump follows less than 50. 
+	That may be because Gary Johnson likes to increase the amount of news he wants to 
+	receive on his timeline from Twitter. Also, he has very less number of followers( 347K) 
+	as compared to Donald Trump(37.4M), so if he wants to transmit his tweet to huge number 
+	of users he has to add more friends which likely results in getting new followers and the 
+	tweet to be seen ny a large number of users while Donald Trump can easily send his tweet 
+	to millions of users as he has a huge no. of followers. This will affect our analysis if 
+	we want to compare two users as the data only tells us about the number of followers and 
+	friends which in turn is extremely different for two users. 
+	Thus, we need to have more details for a better analysis.	
+
+
+
+
+4. The follower graph we've collected is incomplete. To expand it, we would
+have to also collect the list of accounts followed by each of the
+friends. That is, for each user X that Donald Trump follows, we would have to
+also collect all the users that X follows. Assuming we again use the API call
+https://dev.twitter.com/rest/reference/get/friends/ids, how many requests will
+we have to make? Given how Twitter does rate limiting
+(https://dev.twitter.com/rest/public/rate-limiting), approximately how many
+minutes will it take to collect this data?
+
+	Considering the twitter current rate limit which is 15 calls every 15 minutes 
+	Number of friends of DrJillStein, GovGaryJohnson, HillaryClinton, realDonaldTrump 
+	are 1648, 3481, 762, 45 respectively which sums it to 5936. 
+	
+	Therefore there will be total of 5936 + 4 calls for each candidate = "5940 requests"
+
+	Considering the first 15 request will be processed within no time so we can 
+	consider 5940 - 15 = 5925 request. 
+	
+	It will take approx. "5925 minutes"  to collect the data for extended graph
+
+
+	
+	**Note: If we use friend_overlap function we can identify the number of common friends and further we can limit the API requests by 
+	263 overlapping friends among 4 candidates so total request will be 5940 - 263 = 5677 and total time will be approx. 5670 minutes. 
+
+
+

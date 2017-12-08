@@ -1,0 +1,21 @@
+Cluster results: 
+
+Number of users collected: 72
+Number of communities discovered: 2
+Average number of users per community: 33.5
+
+Classify results: 
+
+Number of messages collected: 100
+
+Number of Positive instances found: 25
+One example of Positive class: Come Join Us On Our Island Of Passive Income PARADISE!
+
+✅ Fast &amp; Secure Exchange!
+✅ Trade…  
+
+Number of Negative instances found:21
+One example of Negative Class: Bitcoin Gold Wallet Scam Sees Fraudsters Steal $3.2 Million   #Bitcoin
+
+Number of Neutral instances found:54
+One example of Neutral Class: @eyeone @CryptosQueen @rogerkver The question isn't how well you can trade a drop, it's how much do you care about…  
